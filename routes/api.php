@@ -40,7 +40,7 @@ Route::group([
     ], function () {
         Route::post('create', 'create')->name('create');
         Route::get('list', 'list')->name('list');
-        Route::get('{id}', 'task')->name('task');
+        Route::get('{id}/details', 'details')->name('details');
         Route::put('{id}/update', 'update')->name('update');
         Route::delete('{id}/delete', 'delete')->name('delete');
     });

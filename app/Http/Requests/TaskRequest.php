@@ -30,7 +30,7 @@ class TaskRequest extends FormRequest
         $routeName = Route::getCurrentRoute()->getName();
         $userId = JWTAuth::user()->id;
 
-        if (in_array($routeName, ['tasks.delete', 'tasks.update', 'tasks.task'])) {
+        if (in_array($routeName, ['tasks.delete', 'tasks.update', 'tasks.details'])) {
             $task = $this->taskService->userHasTask($userId, $request->id);
             if (!$task) return false;
         }

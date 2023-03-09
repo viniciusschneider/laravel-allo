@@ -37,8 +37,8 @@ class TaskController extends Controller
         return response()->json($this->taskService->list());
     }
 
-    public function task(TaskRequest $request)
+    public function details(TaskRequest $request)
     {
-        return response()->json($this->taskService->task($request->id));
+        return response()->json($this->taskService->details($request->id));
     }
 }

@@ -51,9 +51,9 @@ class TaskService
         return $this->taskRepository->list($userId);
     }
 
-    public function task($taskId)
+    public function details($taskId)
     {
-        return $this->taskRepository->task($taskId);
+        return $this->taskRepository->details($taskId);
     }
 
     public function userHasTask($userId, $taskId)

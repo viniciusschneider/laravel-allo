@@ -33,7 +33,7 @@ class TaskRepository
         return $this->entity->where('user_id', $userId)->orderBy('created_at', 'desc')->get();
     }
 
-    public function task($taskId)
+    public function details($taskId)
     {
         return $this->entity->firstWhere('id', $taskId);
     }

@@ -40,7 +40,9 @@ class AuthService
     public function login($credentials)
     {
         if (!$token = JWTAuth::attempt($credentials))
-            $this->unauthorizedRequestException();
+            $this->unauthorizedRequestException('Unauthorized', [
+                'status' => 'UNAUTHORIZED'
+            ]);
 
         return $this->generateToken($token);
     }
